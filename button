@@ -1,0 +1,16 @@
+/** ****************** * Color Mode Button * ****************** **/
+document.addEventListener('DOMContentLoaded', function() {
+	var colormodeTrigger = document.querySelector('.js-mode');
+  
+	if (colormodeTrigger) {
+		colormodeTrigger.addEventListener('click', function() {
+			document.body.classList.toggle('dark-mode');
+
+			if (document.body.classList.contains('dark-mode')) {
+				colormodeTrigger.innerText = 'Light mode';
+			} else {
+				colormodeTrigger.innerText = 'Dark mode';
+			}
+		});
+	}
+});
